@@ -1,1 +1,0 @@
-# Skor-And-USP.github.io
