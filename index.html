@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>USP & Skorcuter</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      overflow-x: hidden;
+      overflow-y: auto;
+      background-color: #1e2a47; /* Karanlık mavi arka plan */
+    }
+
+    /* Kış teması - Kar tanesi animasyonu */
+    .snow {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1000;
+    }
+
+    .snowflake {
+      position: absolute;
+      color: white;
+      font-size: 24px;
+      user-select: none;
+      pointer-events: none;
+      animation: fall 5s linear infinite;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-10px) rotate(0deg);
+      }
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+      }
+    }
+
+    .container {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .content {
+      opacity: 0;
+      transform: translateY(100px);
+      animation: fadeInUp 1.5s ease forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .theme-title {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #00ffff;
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin: 0.5rem 0;
+      color: white; /* Beyaz yazı */
+    }
+
+    p {
+      font-size: 0.9rem;
+      color: white; /* Beyaz yazı */
+      margin: 1rem 0 2rem;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .buttons a {
+      text-decoration: none;
+      padding: 10px 20px;
+      background: #000000;
+      color: white;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    .buttons a:hover {
+      background: #333333;
+    }
+
+    .youtube-icons {
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+    }
+
+    .youtube-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .youtube-item img {
+      width: 40px;
+      height: 40px;
+      transition: transform 0.3s;
+    }
+
+    .youtube-item img:hover {
+      transform: scale(1.2);
+    }
+
+    .youtube-item span {
+      margin-top: 5px;
+      font-size: 0.85rem;
+      color: white; /* Beyaz yazı */
+    }
+  </style>
+</head>
+<body>
+  <!-- Kış teması için kar taneleri ekleyelim -->
+  <div class="snow">
+    <span class="snowflake" style="left: 5%; animation-duration: 5s;">❄</span>
+    <span class="snowflake" style="left: 15%; animation-duration: 6s;">❄</span>
+    <span class="snowflake" style="left: 25%; animation-duration: 7s;">❄</span>
+    <span class="snowflake" style="left: 35%; animation-duration: 5s;">❄</span>
+    <span class="snowflake" style="left: 45%; animation-duration: 4s;">❄</span>
+    <span class="snowflake" style="left: 55%; animation-duration: 6s;">❄</span>
+    <span class="snowflake" style="left: 65%; animation-duration: 5s;">❄</span>
+    <span class="snowflake" style="left: 75%; animation-duration: 7s;">❄</span>
+    <span class="snowflake" style="left: 85%; animation-duration: 5s;">❄</span>
+    <span class="snowflake" style="left: 95%; animation-duration: 6s;">❄</span>
+    <!-- Daha fazla kar tanesi eklenebilir -->
+  </div>
+
+  <div class="container">
+    <div class="content">
+      <!-- BAŞLIK -->
+      <h1>USP and Skorcuter is Best!</h1>
+
+      <!-- ALT YAZI -->
+      <p>Made By SkorTeam And USP Team</p>
+
+      <!-- BUTONLAR -->
+      <div class="buttons">
+        <a href="https://dsc.gg/uspteam" target="_blank">Download USP</a>
+        <a href="https://dsc.gg/uspteam" target="_blank">Download Skorcuter</a>
+      </div>
+
+      <!-- YOUTUBE LOGOLARI -->
+      <div class="youtube-icons">
+        <div class="youtube-item">
+          <a href="https://www.youtube.com/@uspexecutor" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_(2017).svg" alt="USP YouTube">
+          </a>
+          <span>USP Youtube Channel</span>
+        </div>
+        <div class="youtube-item">
+          <a href="https://www.youtube.com/@SkorOwner" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_(2017).svg" alt="Skorcuter YouTube">
+          </a>
+          <span>SkorCuter Youtube Channel</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
